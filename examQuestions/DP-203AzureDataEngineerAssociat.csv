@@ -1,0 +1,831 @@
+Questions,GroundTruth
+"You have an ELT solution that uses an Azure Storage account named datastg, an Azure HDInsight cluster, and an Azure Data Factory resource.
+
+You create a Data Factory pipeline by using the following JSON file.
+
+{
+  ""name"": ""MyHiveActivity"",
+  ""type"": ""HDInsightHive"",
+  ""linkedServiceName"": {
+    ""referenceName"": ""MyHDILinkedService"",
+    ""type"": ""LinkedServiceReference""
+  },
+  ""typeProperties"": {
+    ""scriptPath"": ""adftutorial\\hivescripts\\hivescript.hql"",
+    ""getDebugInfo"": ""Failure"",
+    ""defines"": {           
+      ""Output"": """"
+    },
+    ""scriptLinkedService"": {
+      ""referenceName"": ""MyStorageLinkedService"",
+      ""type"": ""LinkedServiceReference""
+    }
+  }
+}
+You create the following Apache Hive script.
+
+DROP TABLE IF EXISTS Devices; 
+CREATE EXTERNAL TABLE Devices (clientid string, market string, devicemodel string, state string)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ' ' 
+STORED AS TEXTFILE LOCATION '${hiveconf:Output}';
+
+INSERT OVERWRITE TABLE HiveSampleOut
+Select 
+  clientid,
+  market,
+  devicemodel,
+  state
+FROM devicestable
+You need to run the script as an activity in the Data Factory pipeline. The solution must write the output of the script to a folder named devices in a container named data in the storage account.
+
+What should you add to the Output value in the JSON file?
+
+Select only one answer.
+
+A. http://data@datastg.blob.core.windows.net/devices/
+
+B. http://datastg.blob.core.windows.net/data/devices/
+
+C. wasb://data@datastg.blob.core.windows.net/devices/
+
+D. wasb:/datastg.blob.core.windows.net/data/devices/",C
+"You create a data flow activity in an Azure Synapse Analytics pipeline.
+
+You plan to use the data flow to read data from a fixed-length text file.
+
+You need to create the columns from each line of the text file. The solution must ensure that the data flow only writes three of the columns to a CSV file.
+
+Which three types of tasks should you add to the data flow activity? Each correct answer presents part of the solution.
+
+Select all answers that apply.
+
+A. aggregate
+
+B. derived column
+
+C. flatten
+
+D. select
+
+E. sink",BDE
+"You create a data flow activity in an Azure Data Factory pipeline.
+
+You need to execute a select task and write the output to multiple columns across multiple sinks.
+
+Which type of task should you add from the select task?
+
+Select only one answer.
+
+A. conditional split
+
+B. new branch
+
+C. pivot
+
+D. unpivot",B
+"You have an Azure Data Factory pipeline that uses Apache Spark to transform data.
+
+You need to run the pipeline.
+
+Which PowerShell cmdlet should you run?
+
+Select only one answer.
+
+A. `Invoke-AzDataFactoryV2Pipeline`
+
+B. Invoke-AzureDataFactoryV2Pipeline
+
+C. Start-AzDataFactoryV2Pipeline
+
+D. Start-AzureDataFactoryV2Pipeline",A
+"You design an Azure Data Factory pipeline that has a data flow activity named Move to Synapse and an append variable activity named Upon failure. Upon failure runs upon the failure of Move to Synapse.
+
+You notice that if the Move to Synapse activity fails, the pipeline status is successful.
+
+You need to ensure that if Move to Synapse fails, the pipeline status is failed. The solution must ensure that Upon Failure executes when Move to Synapse fails.
+
+What should you do?
+
+Select only one answer.
+
+A. Add a new activity with a Failure predecessor to Upon Failure.
+
+B. Add a new activity with a Success predecessor to Move to Synapse.
+
+C. Change the precedence for Upon Failure to Completion.
+
+D. Change the precedence for Upon Failure to Success.",B
+"You are developing an Azure Databricks solution.
+
+You need to ensure that workloads support PyTorch code. The solution must minimize costs.
+
+Which workload persona should you use?
+
+Select only one answer.
+
+A. Data Science and Engineering
+
+B. Machine Learning
+
+C. SQL",B
+"You have an Azure Databricks cluster.
+
+You need to stage files into the shared cluster storage by using a third-party tool.
+
+Which file system should the tool support?
+
+Select only one answer.
+
+A. DBFS
+
+B. NTFS
+
+C. ReFS
+
+D. OraFS",A
+"You are writing a data import task in Azure Data Factory.
+
+You need to increase the number of rows per call to the REST sink
+
+What should you change?
+
+Select only one answer.
+
+A. requestInterval to 500
+
+B. requestInternal to 10,000
+
+C. writeBatchSize to 1,000
+
+D. writeBatchSize to 100,000",D
+"You have an Azure Stream Analytics solution that receives data from multiple thermostats in a building.
+
+You need to write a query that returns the average temperature per device every five minutes for readings within that same five minute period.
+
+Which two windowing functions could you use?
+
+Select all answers that apply.
+
+A. HoppingWindow
+
+B. SessionWindow
+
+C. `SlidingWindow`
+
+D. TumblingWindow",AD
+"You create an Azure Stream Analytics job. You run the job for five hours.
+
+You review the logs and notice multiple instances of the following message.
+
+{""message Time"":""2019-02-04 17:11:52Z"",""error"":null, ""message"":""First Occurred: 02/04/2019 17:11:48 | Resource Name: ASAjob | Message: Source 'ASAjob' had 24 data errors of kind 'LateInputEvent' between processing times '2019-02-04T17:10:49.7250696Z' and '2019-02-04T17:11:48.7563961Z'. Input event with application timestamp '2019-02-04T17:05:51.6050000' and arrival time '2019-02-04T17:10:44.3090000' was sent later than configured tolerance."",""type"":""DiagnosticMessage"",""correlation ID"":""49efa148-4asd-4fe0-869d-a40ba4d7ef3b""}
+You need to ensure that these events are not dropped.
+
+What should you do?
+
+Select only one answer.
+
+A. Decrease the number of Streaming Units (SUs) to 3.
+
+B. Increase the number of Streaming Unit (SUs) for the job to 12.
+
+C. Increase the tolerance for late arrivals.
+
+D. Increase the tolerance for out-of-order events.",C
+"You have an Azure Stream Analytics job named Job1.
+
+Job1 runs continuously and executes non-parallelized queries.
+
+You need to minimize the impact of Azure node updates on Job1. The solution must minimize costs.
+
+To what should you increase the Scale Units (SUs)?
+
+Select only one answer.
+
+A. 2
+
+B. 3
+
+C. 6
+
+D. 12",D
+"You are building a real-time streaming process in Azure Data Factory.
+
+You need to aggregate the data being processed by the stream.
+
+Which stage of the integration pattern should you configure?
+
+Select only one answer.
+
+A. Extract
+
+B. Load
+
+C. transform
+
+D. Upsert",C
+"Which Azure Data Factory components should you use to connect to a data source?
+
+Select only one answer.
+
+A. a dataset
+
+B. a linked service
+
+C. a pipeline
+
+D. an activity
+
+E. an aggregation",B
+"You have an Azure Data Factory named datafactory1.
+
+You configure datafacotry1 to use Git for source control.
+
+You make changes to an existing pipeline.
+
+When you try to publish the changes, you notice the following message displayed when you hover over the Publish All button.
+
+Publish from ADF Studio is disabled to avoid overwriting automated deployments. If required you can change publish setting in Git configuration.
+
+You need to allow publishing from the portal.
+
+What should you do?
+
+Select only one answer.
+
+A. Change the Automated publish config setting.
+
+B. Select **Override live mode** in the Git Configuration.
+
+C. Use a Git client to merge the collaboration branch into the live branch.
+
+D. Use the browser to create a pull request.",A 
+"You have an Azure Data Factory pipeline named Pipeline1.
+
+You need to send an email message if Pipeline1 fails.
+
+What should you do?
+
+Select only one answer.
+
+A. Create a fail activity in the pipeline and set a Failure predecessor on the activity for the last activity in Pipeline1.
+
+B. Create a metric in the Data Factory resource.
+
+C. Create an alert in the Data Factory resource.
+
+D. Create an if condition activity in the pipeline and set a Failure predecessor on the activity for the last activity in Pipeline1.",C
+"You are testing a change to an Azure Data Factory pipeline.
+
+You need to check the change into source control without affecting other users’ work in the data factory.
+
+What should you do?
+
+Select only one answer.
+
+A. Save the change to a forked branch in the source control project.
+
+B. Save the change to the master branch of the source control project.
+
+C. Save the changed pipeline to your workstation.",A
+"You are configuring Azure Data Factory to be used in a CI/CD deployment process.
+
+You need to minimize the administrative tasks required by using global parameters.
+
+Which global parameters should you configure?
+
+Select only one answer.
+
+A. execution schedule
+
+B. server names within a connection object
+
+C. sink task name
+
+D. target database version number",B
+"Your company has a branch office that contains a point of sale (POS) system.
+
+You have an Azure subscription that contains a Microsoft SQL Server database named DB1 and an Azure Synapse Analytics workspace.
+
+You plan to use an Azure Synapse pipeline to copy CSV files from the branch office, perform complex transformations on their content, and then load them to DB1.
+
+You need to pass a subset of data to test whether the CSV columns are mapped correctly.
+
+What can you use to perform the test?
+
+Select only one answer.
+
+A. Data Flow Debug
+
+B. Datasets
+
+C. integration runtime
+
+D. linked service",A
+"You have an Azure Synapse Analytics data pipeline.
+
+You need to run the pipeline at scheduled intervals.
+
+What should you configure?
+
+Select only one answer.
+
+A. a control flow
+
+B. a sink
+
+C. a trigger
+
+D. an activity",C
+"You are developing an Apache Spark pipeline to transform data from a source to a target.
+
+You need to filter the data in a column named Category where the category is cars.
+
+Which command should you run?
+
+Select only one answer.
+
+A. df.select(""ProductName"", ""ListPrice"").where((df[""Category""] == ""Cars"")
+
+B. df.select(""ProductName"", ""ListPrice"") | where((df[""Category""] == ""Cars"")
+
+C. df.select(""ProductName"", ""ListPrice"").where((df[""Category""] -eq ""Cars"")
+
+D. df.select(""ProductName"", ""ListPrice"") | where((df[""Category""] -eq ""Cars"")",A
+"You have a database named DB1 and a data warehouse named DW1.
+
+You need to ensure that all changes to DB1 are stored in DW1. The solution must meet the following requirements:
+
+Identify that a row has changed, but not the final value of the row.
+Minimize the performance impact on the source system.
+What should you include in the solution?
+
+Select only one answer.
+
+A. change data capture
+
+B. change tracking
+
+C. merge replication
+
+D. snapshot replication",B
+"You use an Azure Databricks pipeline to process a stateful streaming operation.
+
+You need to reduce the amount of state data to improve latency during a long-running steaming operation.
+
+What should you use in the streaming DataFrame?
+
+Select only one answer.
+
+A. a partition
+
+B. a tumbling window
+
+C. a watermark
+
+D. RocksDB state management",C
+"You have 500 IoT devices and an Azure subscription.
+
+You plan to build a data pipeline that will process real-time data from the devices.
+
+You need to ensure that the devices can send messages to the subscription.
+
+What should you deploy?
+
+Select only one answer.
+
+A. an Azure event hub
+
+B. an Azure Storage account
+
+C. an Azure Stream Analytics workspace",A
+"You are building an Azure Stream Analytics pipeline.
+
+You need to ensure that data in the pipeline is aggregated every five minutes. The aggregates should include all events in the previous ten minutes.
+
+Which windowing function should you use?
+
+Select only one answer.
+
+A. HoppingWindow
+
+B. SessionWindow
+
+C. SlidingWindow
+
+D. TumblingWindow",A
+"You need to limit sensitive data exposure to non-privileged users. You must be able to grant and revoke access to the sensitive data.
+
+What should you implement?
+
+Select only one answer.
+
+A. Always Encrypted
+
+B. dynamic data masking
+
+C. row-level security (RLS)
+
+D. transparent data encryption (TDE)",B
+"You are implementing an application that queries a table named Purchase in an Azure Synapse Analytics Dedicated SQL pool.
+
+The application must show data only for the currently signed-in user.
+
+You use row-level security (RLS), implement a security policy, and implement a function that uses a filter predicate.
+
+Users in the marketing department report that they cannot see their data.
+
+What should you do to ensure that the marketing department users can see their data?
+
+Select only one answer.
+
+A. Grant the SELECT permission on the function to the Marketing users.
+
+B. Grant the SELECT permission on the Purchase table to the Marketing users.
+
+C. Implement a blocking predicate.
+
+D. Rebuild the function with `SCHEMABINDING=OFF`.",B
+"You need to add permissions to an Azure Data Lake Storage Gen2 account that allows assigning POSIX access controls.
+
+Which role should you use?
+
+Select only one answer.
+
+A. Storage Blob Data Contributor
+
+B. Storage Blob Data Delegator
+
+C. Storage Blob Data Owner
+
+D. Storage Blob Data Reader",C
+"You have an Azure Data Lake Storage Gen2 account.
+
+You grant developers Read and Write permissions by using ACLs to the files in the path \root\input\cleaned.
+
+The developers report that they cannot open the files.
+
+How should you modify the permissions to ensure that the developers can open the files?
+
+Select only one answer.
+
+A. Add Contributor permission to the developers.
+
+B. Add Execute permissions to the files.
+
+C. Grant Execute permissions to all folders.
+
+D. Grant Execute permissions to the root folder only.",C
+"You use Azure Data Factory to connect to a notebook that runs in an Azure Databricks cluster. The connection is set to use access tokens.
+
+You need to revoke a user’s token.
+
+What should you use?
+
+Select only one answer.
+
+A. Access control (IAM)
+
+B. Conditional Access
+
+C. the Admin Console
+
+D. Token Management API 2.0",D
+"You have an Azure Storage account named account1.
+
+You need to ensure that requests to account1 can only be made from specific domains.
+
+What should you configure?
+
+Select only one answer.
+
+A. blob public access
+
+B. CDN
+
+C. CORS
+
+D. secure transfer",C
+"You have an Azure subscription that contains the following resources:
+
+An Azure Synapse Analytics workspace named workspace1
+A virtual network named VNet1 that has two subnets named sn1 and sn2
+Five virtual machines that are connected to sn1
+You need to ensure that the virtual machines can connect to workspace1. The solution must prevent traffic from the virtual machines to workspace1 from traversing the public internet.
+
+What should you create?
+
+Select only one answer.
+
+A. Application gateway
+
+B. ExpressRoute
+
+C. Network peering
+
+D. Private endpoint
+
+E. Service endpoint",D
+"You have a pipeline in an Azure Synapse Analytics workspace. The pipeline runs a stored procedure against the dedicated SQL pool.
+
+The pipeline throws errors occasionally.
+
+You need to check the error information by using the minimum amount of administrative effort.
+
+What should you do?
+
+Select only one answer.
+
+A. Configure diagnostic settings in the workspace.
+
+B. Configure the Activity run ended metric in the workspace.
+
+C. From the Monitor page of Azure Synapse Studio, review the Pipeline runs tab.
+
+D. From the Monitor page of Azure Synapse Studio, review the SQL requests tab.",C
+"You have an Azure Synapse Analytics workspace.
+
+You need to measure the performance of SQL queries running on the dedicated SQL pool.
+
+Which two actions achieve the goal? Each correct answer presents a complete solution
+
+Select all answers that apply.
+
+A. From the Monitor page of Azure Synapse Studio, review the Pipeline runs tab.
+
+B. From the Monitor page of Azure Synapse Studio, review the SQL requests tab.
+
+C. Query the sys.dm_pdw_exec_request view.
+
+D. Query the sys.dm_pdw_exec_sessions view.",BC
+"You have an Azure Data Factory named ADF1.
+
+You need to ensure that you can analyze pipeline runtimes for ADF1 for the last 90 days.
+
+What should you use?
+
+Select only one answer.
+
+A. Azure Data Factory
+
+B. Azure Monitor
+
+C. Azure Stream Analytics
+
+D. Azure App Insights",B
+"You have an Azure Data Factory named ADF1.
+
+You need to review Data Factory pipeline runtimes for the last seven days. The solution must provide a graphical view of the data.
+
+What should you use?
+
+Select only one answer.
+
+A. the Dashboard view of the pipeline runs
+
+B. the List view of the pipeline runs
+
+C. the Gantt view of the pipeline runs
+
+D. the Overview tab of Azure Data Factory Studio",C
+"You monitor an Apache Spark job that has been slower than usual during the last two days. The job runs a single SQL statement in which two tables are joined.
+
+You discover that one of the tables has significant data skew.
+
+You need to improve job performance.
+
+Which hint should you use in the query?
+
+Select only one answer.
+
+A. COALESCE
+
+B. REBALANCE
+
+C. `REPARTITION`
+
+D. SKEW",D
+"You monitor an Azure Data Factory pipeline that occasionally fails.
+
+You need to implement an alert that will contain failed pipeline run metrics. The solution must minimize development effort.
+
+Which two actions achieve the goal? Each correct answer presents a complete solution.
+
+Select all answers that apply.
+
+A. From Azure portal, create an alert and add the metrics.
+
+B. From the Monitor page of Azure Data Factory Studio, create an alert.
+
+C. Implement a Web activity in the pipeline.
+
+D. Implement a WebHook activity in the pipeline.",AB
+"You have an Azure Synapse Analytics workspace that includes a table named Table1.
+
+You are evaluating the use of a clustered columnstore index.
+
+What is the minimum recommended number of rows for clustered columnstore indexes?
+
+Select only one answer.
+
+A. 600,000
+
+B. 6 million
+
+C. 60 million
+
+D. 600 million",C
+"You have an Azure Synapse Analytics workspace.
+
+You need to build a materialized view.
+
+Which two items should be included in the SELECT clause of the view? Each correct answer presents part of the solution.
+
+Select all answers that apply.
+
+A. a subquery
+
+B. an aggregate function
+
+C. the GROUP BY clause
+
+D. the HAVING clause
+
+E. the `OPTION` clause",BC
+"You have an Azure subscription that contains an Azure SQL database named DB1.
+
+You need to implement row-level security (RLS) for DB1. The solution must block users from updating rows with values that violate RLS.
+
+Which block predicate should you use?
+
+Select only one answer.
+
+A. AFTER INSERT
+
+B. AFTER UPDATE
+
+C. BEFORE DELETE
+
+D. BEFORE UPDATE",B
+"You have an Azure Synapse Analytics SQL pool.
+
+You need to monitor currently-executing query executions in the SQL pool.
+
+Which three dynamic management views should you use? Each correct answer presents part of the solution.
+
+Select all answers that apply.
+
+A. sys.dm_exec_cached_plans
+
+B. sys.dm_pdw_exec_requests
+
+C. sys.dm_pdw_errors
+
+D. sys.dm_pdw_request_steps
+
+E. sys.dm_pdw_sql_requests",BDE
+"You have 100 retail stores distributed across Asia, Europe, and North America.
+
+You are developing an analytical workload using Azure Stream Analytics that contains sales data for stores in different regions. The workload contains a fact table with the following columns:
+
+Date: Contains the order date
+Customer: Contains the customer ID
+Store: Contains the store ID
+Region Contains the region ID
+Product: Contains the product ID
+Price: Contains the unit price per product
+Quantity: Contains the quantity sold
+Amount: Contains the price multiplied by quantity
+You need to design a partition solution for the fact table. The solution must meet the following requirements:
+
+Optimize read performance when querying sales data for a single region in a given month.
+Optimize read performance when querying sales data for all regions in a given month.
+Minimize the number of partitions.
+Which column should you use for partitioning?
+
+Select only one answer.
+
+A. Date partitioned by month
+
+B. Product
+
+C. Region
+
+D. Store",A
+"You are designing a data partitioning strategy for an Azure Synapse Analytics workload.
+
+You need to implement a distribution strategy that optimizes data load operations.
+
+Which type of distribution should you use?
+
+Select only one answer.
+
+A. Hash
+
+B. replicated tables
+
+C. round-robin",C
+"You are importing data into an Azure Synapse Analytics database. The data is being inserted by using PolyBase.
+
+You need to maximize network throughput for the import process.
+
+What should you use?
+
+Select only one answer.
+
+A. Scale the target database out.
+
+B. Scale the target database up.
+
+C. Shard the source data across multiple files.
+
+D. Shard the source data across multiple storage accounts.",C
+"You have an Azure Synapse Analytics database named DB1.
+
+You need to import data into DB1. The solution must minimize Azure Data Lake Storage transaction costs.
+
+Which design pattern should you use?
+
+Select only one answer.
+
+A. Store the data in 500-MB files.
+
+B. Store the data in 2,000-byte files.
+
+C. Use a read-access geo-redundant storage (RA-GRS) storage account.
+
+D. Use the Avro file format.
+
+E. Use the ORC file format.",A
+"You are designing a database solution that will host data for multiple business units.
+
+You need to ensure that queries from one business unit do not affect the other business units.
+
+Which type of partitioning should you use?
+
+Select only one answer.
+
+A. functional
+
+B. horizontal
+
+C. table
+
+D. vertical",A
+"You are designing an Azure Synapse Analytics solution that will be used to analyze patient outcome data from a hospital.
+
+Which database template should you use?
+
+Select only one answer.
+
+A. Healthcare Insurance
+
+B. Healthcare Provider
+
+C. Life Insurance & Annuities
+
+D. Pharmaceuticals",B
+"You plan to deploy an Azure Synapse Analytics solution that will use the Retail database template and include three tables from the Business Metrics category.
+
+You need to create a one-to-many relationship from a table in Retail to a table in Business Metrics.
+
+What should you do first?
+
+Select only one answer.
+
+A. Create a database.
+
+B. Publish the database.
+
+C. Select the table in Business Metric.
+
+D. Select the table in Retail.",A
+"You have a data solution that includes an Azure SQL database named SQL1 and an Azure Synapse database named SYN1. SQL1 contains a table named Table1. Data is loaded from SQL1 to the SYN1.
+
+You need to ensure that Table1 supports incremental loading.
+
+What should you do?
+
+Select only one answer.
+
+A. Add a new column to track lineage in Table1.
+
+B. Define a new foreign key in Table1.
+
+C. Enable data classification in Microsoft Purview.
+
+D. Enable data lineage in Microsoft Purview.",A
+"You have an Azure subscription that uses Microsoft Purview.
+
+You need to identify which assets have been cataloged by Microsoft Purview.
+
+What should you use?
+
+Select only one answer.
+
+A. Azure Data Factory
+
+B. Azure Data Studio
+
+C. the Microsoft Purview compliance portal
+
+D. the Microsoft Purview governance portal",D

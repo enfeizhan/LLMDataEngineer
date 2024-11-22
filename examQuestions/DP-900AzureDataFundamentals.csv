@@ -1,0 +1,568 @@
+Questions,GroundTruth
+"Which type of Azure Storage is used to store large amounts of files to be shared with virtual machines by using SMB?
+
+Select only one answer.
+
+A. Azure Data Lake Storage Gen2
+
+B. Azure Files
+
+C. Azure Storage page blobs
+
+D. Azure Table storage",B
+"Which Azure Blob storage access tier should you use for data that will be used once per year and can have an access time that takes more than an hour?
+
+Select only one answer.
+
+A. Archive
+
+B. Cool
+
+C. Hot",A
+"What are two characteristics of Azure Table storage? Each correct answer presents a complete solution.
+
+Select all answers that apply.
+
+A. Each RowKey value is unique within a table.
+
+B. Each RowKey value is unique within a table partition.
+
+C. Items in the same partition are stored in a RowKey order.
+
+D. Tables use indexes to speed up queries.",BC
+"You need to replace an existing on-premises SMB shared folder with a cloud solution.
+
+Which storage option should you choose?
+
+Select only one answer.
+
+A. Azure Blob storage
+
+B. Azure Data Lake Storage
+
+C. Azure Files
+
+D. Azure Table storage",C
+"Which Azure Cosmos DB API should you use for data in a graph structure?
+
+Select only one answer.
+
+A. Apache Cassandra
+
+B. Apache Gremlin
+
+C. MongoDB
+
+D. Table",B 
+"Which Azure Cosmos DB API should you use for data in the BSON format?
+
+Select only one answer.
+
+A. Apache Cassandra
+
+B. Apache Gremlin
+
+C. MongoDB
+
+D. Table",C
+"Which Azure Cosmos DB API should you use for data in key/value tables?
+
+Select only one answer.
+
+A. Apache Cassandra
+
+B. Apache Gremlin
+
+C. MongoDB
+
+D. Table",D
+"You need to process many JSON files every minute, while keeping the data from the files accessible by using native queries.
+
+Which Azure Cosmos DB API should you use?
+
+Select only one answer.
+
+A. Apache Cassandra
+
+B. Apache Gremlin
+
+C. NoSQL
+
+D. Table",C
+"Which storage solution allows you to aggregate data stored in JSON files for use in analytical reports without additional development effort?
+
+Select only one answer.
+
+A. Azure Blob storage
+
+B. Azure Cosmos DB
+
+C. Azure Data Lake Storage
+
+D. Azure SQL Database",B
+"Which Azure Cosmos DB API allows you to work with vertices and edges?
+
+Select only one answer.
+
+A. Apache Cassandra
+
+B. Apache Gremlin
+
+C. NoSQL
+
+D. Table",B 
+"Which type of data structure should you use to optimize create, read, update, and delete (CRUD) operations for data saved in a multi-column tabular format?
+
+Select only one answer.
+
+A. document database
+
+B. graph database
+
+C. key/value store
+
+D. relational database",D
+"Which type of data structure allows you to store data in a two-column format without requiring a complex database management system?
+
+Select only one answer.
+
+A. document database
+
+B. graph database
+
+C. key/value store
+
+D. relational database",C
+"Which Azure data service allows you to store images, PDF files, and static JSON files?
+
+Select only one answer.
+
+A. Azure Cosmos DB for Apache Gremlin
+
+B. Azure Blob storage
+
+C. Azure SQL Database
+
+D. Azure Table storage",B
+"Which type of database should you use to store sequential data in the fastest way possible?
+
+Select only one answer.
+
+A. Azure SQL Database
+
+B. Azure Table storage
+
+C. Graph Database
+
+D. Time series database",D
+"You design an application that needs to store data based on the following requirements:
+
+Store historical data from multiple data sources.
+Load data on a scheduled basis.
+Use a denormalized star or snowflake schema.
+Which type of database should you use?
+
+Select only one answer.
+
+A. Azure Table storage
+
+B. Graph Database
+
+C. OLAP Database
+
+D. OLTP Database",C 
+"Which two types of file store data in columnar format? Each correct answer presents a complete solution.
+
+Select all answers that apply.
+
+A. Avro
+
+B. CSV
+
+C. Parquet
+
+D. ORC",CD
+"Which Azure Cosmos DB API allows you to implement a non-relational database and model nodes that have relationships between them?
+
+Select only one answer.
+
+A. Apache Gremlin
+
+B. MongoDB
+
+C. NoSQL
+
+D. Table",A 
+"Which two attributes are characteristics of a transactional data workload? Each correct answer presents a complete solution.
+
+Select all answers that apply.
+
+A. highly denormalized
+
+B. highly normalized
+
+C. optimized for create, read, update, and delete (CRUD) operations
+
+D. optimized for read operations",BC
+"What are three properties of analytical data workloads? Each correct answer presents a complete solution.
+
+Select all answers that apply.
+
+A. Read and write operations are optimized.
+
+B. Read operations are optimized.
+
+C. They calculate business metrics over time.
+
+D. They operate on current data.
+
+E. They operate on historical data.",ABD
+"Which feature of transactional data processing guarantees that concurrent processes cannot see the data in an inconsistent state?
+
+Select only one answer.
+
+A. atomicity
+
+B. consistency
+
+C. durability
+
+D. isolation",D
+"Which job role is responsible for designing database solutions, creating databases, and developing stored procedures?
+
+Select only one answer.
+
+A. database administrator
+
+B. database analyst
+
+C. database engineer
+
+D. database user",C
+"Which job role is responsible for troubleshooting index performance, provisioning access to databases, and backing up databases?
+
+Select only one answer.
+
+A. database administrator
+
+B. database analyst
+
+C. database engineer
+
+D. database user",A 
+"Which job role is responsible for creating reports from a database and using OLAP cubes?
+
+Select only one answer.
+
+A. database administrator
+
+B. database analyst
+
+C. database engineer
+
+D. database user",B 
+"Which job role is responsible for managing the security of the data in a database, implementing backup and recovery plans, and monitoring the performance of database solutions?
+
+Select only one answer.
+
+A. database administrator
+
+B. data analyst
+
+C. data engineer
+
+D. database user",A 
+"Which two keys are needed to create a one-to-many relationship between two tables in a relational database? Each correct answer presents part of the solution.
+
+Select all answers that apply.
+
+A. a foreign key
+
+B. a primary key
+
+C. a unique key
+
+D. an index key",AB
+"Which SQL operation is used to combine the content of two tables based on a shared column?
+
+Select only one answer.
+
+A. `HAVING`
+
+B. INTERSECT
+
+C. JOIN
+
+D. UNION",C
+"Select the answer that correctly completes the sentence.
+
+[Answer choice] is a process to reduce duplicate data in a database and ensure data integrity.
+
+Select only one answer.
+
+A. Indexing
+
+B. Normalization
+
+C. Projecting
+
+D. Refactoring",B
+"No matter how many correct choices there are, strictly no comments or explanations:
+Which three statements accurately describe the properties of a table in a relational database? Each correct answer presents a complete solution.
+
+Select all answers that apply.
+
+A. All columns must contain values.
+
+B. A table can have a primary key build on multiple columns.
+
+C. A table can have only one foreign key.
+
+D. Each column must have a datatype.
+
+E. Each row in a table has the same number of columns.",BDE
+"You need to recommend a solution that meets the following requirements:
+
+Encapsulates a business logic that can rename the products in a database
+Adds entries to tables
+What should you include in the recommendation?
+
+Select only one answer.
+
+A. a stored procedure
+
+B. a table-valued function
+
+C. a view
+
+D. an inline function",A
+"In a relational database, what can you use to create a virtual table from the results of a SELECT statement?
+
+Select only one answer.
+
+A. a relationship
+
+B. a stored procedure
+
+C. a view
+
+D. an index",C
+"Which data service provides a fully managed relational database with close to 100 percent feature parity with Microsoft SQL Server?
+
+Select only one answer.
+
+A. Azure SQL Database
+
+B. Azure SQL Managed Instance
+
+C. Azure Synapse Analytics
+
+D. SQL Server on Azure Virtual Machines",B 
+"Which data service allows you to use every feature of Microsoft SQL Server in the cloud?
+
+Select only one answer.
+
+A. Azure SQL Database
+
+B. Azure SQL Managed Instance
+
+C. SQL Server on an Azure Virtual Machines running Linux
+
+D. SQL Server on an Azure Virtual Machines running Windows",D
+"Which data service allows you to create a single database that can scale up and down without downtime?
+
+Select only one answer.
+
+A. SQL Azure SQL Database
+
+B. Azure SQL Managed Instance
+
+C. SQL Server on Azure Virtual Machines",B 
+"Which data service allows you to control the amount of RAM, change the I/O subsystem configuration, and add or remove CPUs?
+
+Select only one answer.
+
+A. Azure SQL Database
+
+B. Azure SQL Managed Instance
+
+C. SQL Server on Azure Virtual Machines",D
+"Which open-source database is a hybrid relational-object database?
+
+Select only one answer.
+
+A. MariaDB
+
+B. MySQL
+
+C. Oracle Database
+
+D. PostgreSQL",D
+"Which open-source database has built-in support for temporal data?
+
+Select only one answer.
+
+A. MariaDB
+
+B. MySQL
+
+C. Oracle Database
+
+D. PostgreSQL",A
+"What should you use to process large amounts of data by using Apache Hadoop?
+
+Select only one answer.
+
+A. Azure Data Factory
+
+B. Azure Databricks
+
+C. Azure HDInsight
+
+D. Azure Synapse Analytics",C
+"Which type of data store uses star schemas, fact tables, and dimension tables?
+
+Select only one answer.
+
+A. data lake
+
+B. data warehouse
+
+C. cube
+
+D. relational database",B
+"Which data integration service allows you to orchestrate data flow without coding?
+
+Select only one answer.
+
+A. Azure Data Factory
+
+B. Azure Data Lake
+
+C. Azure Databricks
+
+D. Azure HDInsight",A 
+"Which two services allow you to create a pipeline to process data in response to an event? Each correct answer presents a complete solution.
+
+Select all answers that apply.
+
+A. Azure Data Factory
+
+B. Azure Databricks
+
+C. Azure HDInsight
+
+D. Azure Synapse Analytics",AD
+"Which two services allow you to pre-process a large volume of data by using Scala? Each correct answer presents a complete solution.
+
+Select all answers that apply.
+
+A. a serverless Apache Spark pool in Azure Synapse Analytics
+
+B. Azure Databricks
+
+C. A dedicated SQL pool in Azure Synapse Analytics
+
+D. The serverless SQL pool in Azure Synapse Analytics",A 
+"You have an Azure Cosmos DB service running the SQL API. One of the operational databases has a lot of transactions.
+
+Which service allows you to perform near real-time analytics on the operational data stored in Azure Cosmos DB?
+
+Select only one answer.
+
+A. Azure Data Lake Storage
+
+B. Azure Databricks
+
+C. Azure HDInsight
+
+D. Azure Synapse",D
+"
+In a stream processing architecture, what can you use to persist the processed results as files?
+
+Select only one answer.
+
+A. Azure Data Lake Storage Gen2
+
+B. Azure Databricks
+
+C. Azure Event Hubs
+
+D. Azure Synapse Analytics",A 
+"Which service allows you to perform on-demand analysis of large volumes of data from text logs, websites and IoT devices by using a common querying language for all the data sources?
+
+Select only one answer.
+
+A. Azure Cosmos DB
+
+B. Azure Data Explorer
+
+C. Azure Data Lake Storage Gen2
+
+D. Azure Stream Analytics",B
+"Which type of visual in Microsoft Power BI should you use to identify the correlation between two numeric measures?
+
+Select only one answer.
+
+A. bar charts
+
+B. line charts
+
+C. pie charts
+
+D. scatter plots",D
+"What should you create in a data model to allow users to drill up and drill down in a report?
+
+Select only one answer.
+
+A. a cube
+
+B. a dimension
+
+C. a hierarchy
+
+D. a fact table",C
+"Which data model element represents the entities by which you want to aggregate measures in Microsoft Power BI?
+
+Select only one answer.
+
+A. dimensions
+
+B. facts
+
+C. keys
+
+D. relationships",A 
+"Which two visuals in Microsoft Power BI allow you to visually compare numeric values for discrete categories? Each correct answer presents a complete solution.
+
+Select all answers that apply.
+
+A. a bar chart
+
+B. a card
+
+C. a column chart
+
+D. a matrix",AC
+"Which visual in Microsoft Power BI allows you to view trends, such as changes in sales over time?
+
+Select only one answer.
+
+A. a card
+
+B. a line chart
+
+C. a pie chart
+
+D. a scatter plot",B
+"In the Power BI service, what should you create to share a single page with the most important visuals from reports?
+
+Select only one answer.
+
+A. a dashboard
+
+B. a dataset
+
+C. a scorecard
+
+D. a workspace",A
