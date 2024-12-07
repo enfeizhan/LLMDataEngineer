@@ -19,6 +19,8 @@ Specifically, this study evaluates the performance of four language models—gpt
 
 For this experiment, we purchased credit from OpenAI for the usage of API for model gpt-4o and gpt-4o-mini. In the API calls, the system message as in the prompt notifies what the model should do with the user input that follows the system message in the prompt. 
 
+Exam questions can be found in the folder [examQuestions](examQuestions/).
+
 As you would see in the later section that this experiment runs against 190 questions, the framework library Langchain is employed to prompt the model by programmatically hitting the API looping through all the questions. 
 
 It is well known that LLMs output unstructured texts, occasionally even specifically informed about the format. For this reason, we use the method with_structured_output with predefined schema for the output. As supported by Langchain, this works very well with OpenAI GPT models. 
