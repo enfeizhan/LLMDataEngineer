@@ -1,3 +1,9 @@
+# SQL Difficulty Level
+
+SQL assumes primary importance for the career of data engineers. As a ubiquitous declarative language, it defines data transformation across various technologies, domains, platforms etc in hundreds of variants.
+
+With the assistance of ChatGPT and based on experience from practice we designed a 10-level structure useful for assessing SQL query difficulty.
+
 |Difficulty Level|Skill Summary|Description|Examples|Required Skills|
 |---|---|---|---|---|
 |1|Basic|Simple, single-command queries requiring minimal SQL knowledge.|CREATE DATABASE, DROP TABLE, SELECT \*|Basic SQL syntax, understanding of database objects|
