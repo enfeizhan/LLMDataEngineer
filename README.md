@@ -33,3 +33,43 @@ In Table 1, the models' performance is presented as both percentages and the num
 |gpt-4o|84.5% (60)|89.5% (17)|86% (43)|80% (40)|
 |llama3.1-8b|49.3% (35)|78.9% (15)|80% (40)|56% (28)|
 |llama3.1-405b|71.8% (51)|78.9% (15)|82% (41)|70% (35)|
+
+Exam-wise, gpt-4o consistently outperforms the other models, achieving the highest scores across all exams. For example, it leads with 84.5% accuracy on the AWS exam, where the performance gap between models is most pronounced, and secures the top position in the GCP and Azure 900 and 203 exams. 
+
+In contrast, llama3.1-8b records the lowest performance in three out of four exams, particularly struggling on the AWS and Azure 203 tests. Meanwhile, gpt-4o-mini and llama3.1-405b exhibit more moderate performance, often achieving comparable results, though they remain consistently behind gpt-4o. 
+
+A model-wise analysis reveals that gpt-4o demonstrates a clear advantage in versatility and domain adaptability, with scores ranging from 80% to 89.5%. Although gpt-4o-mini occasionally approaches its performance, its variability is more pronounced, particularly with a drop to 72% on the Azure 203 exam. llama3.1-405b shows less consistent results but is competitive with gpt-4o-mini in certain scenarios. The relatively poor performance of llama3.1-8b suggests that smaller model sizes may struggle with the complexity or domain specificity of these tasks. 
+
+These findings suggest that larger, more robust models like gpt-4o are better equipped to handle diverse certification domains, reflecting greater generalization and adaptability. The significant performance gaps on certain exams, such as AWS, indicate potential challenges in domain-specific knowledge representation and reasoning for smaller models like llama3.1-8b. This analysis underscores the importance of scale and specialized tuning in achieving state-of-the-art results in domain-specific applications. 
+
+The Azure exams provide a means to compare how the model performs at two different difficulty levels. Azure DP-900 focuses on data engineering concepts, which is more factual. Whereas Azure DP-203 involves more challenges in real life data engineering tasks, which involves more reasoning. All models demonstrate that they perform better in the factual questions than questions involving reasoning. Between the models, the performance differs more greatly in simple models gpt-4o-mini and gpt-4o than in advanced models llama3.1-8b and llama3.1-405b. Between model families, GPT models are more stable than Llama models. 
+
+Exam Details 
+
+While LLMs succeed in many scenarios, patterns can be observed where LLMs are inherently struggling with the challenges. This section summarizes these patterns identified from the mistakes made by the LLMs in the exam. 
+
+There are many perspectives to analyze how the mistakes are distributed. 
+
+From the models 
+
+As statistical models, LLMs generate results by their ability to assign probabilities to possible outcomes. Due to many factors during the training process, LLMs may reflect incapabilities collectively or differently by model families. 
+
+All models are wrong in the same way or in different ways 
+
+Mistakes made by all models probably emphasize that LLMs must be applied with caution. 
+
+Although four models differ in complexity between simpler and more advanced models and in architecture between model families, they can still be prone to err in the same way. 
+
+The cases with different wrong answers not only expose the type of problem that surpasses LLMs’ capabilities in general but also reveal the subtle differences between LLMs, even if they are in the same family. 
+
+Interestingly, the latter case does not happen to Azure 900, which is a simpler test. 
+
+Half correct half wrong 
+
+GPT are correct and Llama are wrong or vice versa 
+
+This case arguably demonstrates the difference between LLM families. The difference can originate from any aspects that define the different model creators. Within each family, although there are many aspects that can characterise the models differently, there is common ground which might not be obvious to the model creators themselves. Interestingly the former happens more often than the latter. 
+
+Simple are wrong and complex are correct or vice versa 
+
+This is probably the most challenging case. Normally more advanced models prevail, which has been observed from Table 1. What causes them to be outperformed by their simpler peers is interesting and deserves more in-depth investigation. The finding will benefit model algorithm designs ensuring that scaling has positive effect. This also provides another warning sign that LLMs should be used with caution, which is also the ground that in the proposed benchmark creation mechanism we insist that human supervisor be in each step. Unsurprisingly the former happens more often than the latter. However, the latter can still happen more often in the advanced Azure 203 than Azure 900. 
