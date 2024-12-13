@@ -12,9 +12,9 @@ D. Use AWS Lake Formation to define fine-grained data access policies and facili
 <table>
   <tr>
     <td style="width: 50%; padding: 10px; vertical-align: top;">
-      **Answer given on ChatGPT UI**  
+      **Answer given on ChatGPT UI**
+      
       The correct answer is:
-
 D. Use AWS Lake Formation to define fine-grained data access policies and facilitate queries through supported AWS services.
 
 Explanation:
@@ -28,7 +28,8 @@ Summary:
 AWS Lake Formation is the best option because it provides a unified, centralized approach for managing row-level and column-level access to data stored in S3 while supporting Athena, Redshift Spectrum, and Apache Hive on EMR.
     </td>
     <td style="width: 50%; padding: 10px; vertical-align: top;">
-      **Answer given on meta.ai**  
+      **Answer given on meta.ai**
+      
       The correct answer is:
 D. Use AWS Lake Formation to define fine-grained data access policies and facilitate queries through supported AWS services.
 AWS Lake Formation is a data warehousing and analytics service that enables you to set up a secure data lake in days. It allows you to define fine-grained data access policies and permissions at the row and column level, making it an ideal choice for managing data permissions efficiently.
