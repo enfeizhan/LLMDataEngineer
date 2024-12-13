@@ -1,3 +1,5 @@
+These are questions that all LLMs we have tested demonstrate capability to answer the question correctly.
+
 An organization is creating a data lake on AWS and requires granular access control. They need to grant specific users access to certain rows and columns within their datasets. The organization's teams will query the data using a combination of Amazon Athena, Amazon Redshift Spectrum, and Apache Hive on Amazon EMR. Which AWS service should the organization implement to manage data permissions efficiently?
 
 A. Manage access through S3 bucket policies and IAM roles for row and column-level security.
