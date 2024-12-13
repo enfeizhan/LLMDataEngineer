@@ -9,10 +9,9 @@ C. Use Redshift security groups and views for row and column-level permissions, 
 D. Use AWS Lake Formation to define fine-grained data access policies and facilitate queries through supported AWS services.
 
 
-<table>
-  <tr>
-    <td style="width: 50%; padding: 10px; vertical-align: top;">
-      **Answer given on ChatGPT UI**
+<div style="display: flex;">
+  <div style="flex: 1; padding: 10px;"> 
+      **Answer given on meta.ai**
       
       The correct answer is:
 D. Use AWS Lake Formation to define fine-grained data access policies and facilitate queries through supported AWS services.
@@ -26,8 +25,8 @@ B. Apache Ranger on EMR: While Apache Ranger provides granular access control fo
 C. Redshift security groups and views: Security groups control network access, not row- or column-level data access. Views in Redshift can provide column- and row-level access, but they do not apply to Athena or Redshift Spectrum, and they are specific to Redshift databases, not S3-based data lakes.
 Summary:
 AWS Lake Formation is the best option because it provides a unified, centralized approach for managing row-level and column-level access to data stored in S3 while supporting Athena, Redshift Spectrum, and Apache Hive on EMR.
-    </td>
-    <td style="width: 50%; padding: 10px; vertical-align: top;">
+    </div>
+    <div style="flex: 1; padding: 10px;">
       **Answer given on meta.ai**
       
       The correct answer is:
@@ -37,6 +36,6 @@ The other options are incorrect because:
 A. While S3 bucket policies and IAM roles can provide some level of access control, they do not offer the same level of granular access control as AWS Lake Formation.
 B. Apache Ranger on Amazon EMR can provide granular access control, but it is not specifically designed for use with Amazon Athena, Amazon Redshift Spectrum, and Apache Hive on Amazon EMR.
 C. Redshift security groups and views can provide some level of access control, but they are not as flexible or powerful as AWS Lake Formation's fine-grained data access policies.
-    </td>
-  </tr>
-</table>
+</div>
+
+</div>
