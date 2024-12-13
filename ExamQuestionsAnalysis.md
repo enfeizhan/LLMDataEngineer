@@ -39,3 +39,16 @@ C. Redshift security groups and views can provide some level of access control, 
 </div>
 
 </div>
+<div style="display: flex;">
+
+  <div style="flex: 1; padding: 10px;">
+    **Column 1 Content**  
+    This is the content for the first column.
+  </div>
+
+  <div style="flex: 1; padding: 10px;">
+    **Column 2 Content**  
+    This is the content for the second column.
+  </div>
+
+</div>
