@@ -40,6 +40,7 @@ Answers from the two LLMs familys share nearly identical structure. First, they 
 The exam question here specifies two requirements:
 1. it must offer fine-grained data access policies and permissions at both low- and column-level;
 2. it must work compatibly with Amazon Athena, Amazon Redshift Spectrum, and Apache Hive on Amazon EMR.
+
 The LLMs should have knowledge about these two points and the four options to derive a higher probability for one of the four options. It must understand the difference between access control and fine-grained access control such that, for instance, S3 with fine-grained access control is a low probability as S3 is only associated to access control at file/object level.
 Other options would be validated or invalidated in the same approach. Apache Ranger is associated with fine-grained access control but not with Amazon Athena and Amazon Redshift Spectrum.
 It has to be pointed out that humans have to apply the logical thinking separately to each of the options, because our brain probably runs a single thread. Contrastingly, autoregressive models, where the models predict the next token iteratively with the last predicted tokens as input, must be applying the logical thinking to the two requirements and the four options simutaneously in the attention matrix and the attention (attention is one of the foundamental concepts of transformer models) to option D lights up.
