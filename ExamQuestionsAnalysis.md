@@ -27,10 +27,12 @@ D. Use AWS Lake Formation to define fine-grained data access policies and facili
   <tr>
     <td style="width: 50%; padding: 10px; vertical-align: top;">
       **Answer given on ChatGPT UI**
+      
       jkjkjkjkjkjkjkjkjkjkjkjkjkjkj
     </td>
     <td style="width: 50%; padding: 10px; vertical-align: top;">
       **Answer given on meta.ai UI** 
+      
       kjkjkjkjkjkjkjkjkjkjkjkjkjj
     </td>
   </tr>
