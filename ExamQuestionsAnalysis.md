@@ -35,3 +35,7 @@ D. Use AWS Lake Formation to define fine-grained data access policies and facili
   </div>
 </div>
 
+| Left-side text                                                                                       | Vertical Line | Right-side text                                                                                       |
+| :----------------------------------------------------------------------------------------------------- | :------------- | :----------------------------------------------------------------------------------------------------- |
+| This is the text on the left side.                                                                  | &#124;          | This is the text on the right side.                                                                  |
+| More text on the left side.                                                                           | &#124;          | More text on the right side.                                                                           |
