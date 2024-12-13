@@ -23,21 +23,15 @@ D. Use AWS Lake Formation to define fine-grained data access policies and facili
   </tr>
 </table>
 
-<div style="display: flex;">
-
-  <div style="flex: 1; padding: 10px; background-color: #f0f0f0;">
-    **Column 1 Content**  
-    Line 1 of Column 1  
-    Line 2 of Column 1  
-    Line 3 of Column 1  
+<div style="display: flex; justify-content: space-between;">
+  <div style="width: 45%; text-align: justify;">
+    <!-- Left-side text -->
+    This is the text on the left side.
   </div>
-
-  <div style="flex: 1; padding: 10px; background-color: #e0e0e0;">
-    **Column 2 Content**  
-    Line 1 of Column 2  
-    Line 2 of Column 2  
-    Line 3 of Column 2  
+  <div style="width: 1px; background-color: #ccc; margin: 0 10px;"></div>
+  <div style="width: 45%; text-align: justify;">
+    <!-- Right-side text -->
+    This is the text on the right side.
   </div>
-
 </div>
 
