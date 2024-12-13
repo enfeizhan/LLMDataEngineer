@@ -23,17 +23,21 @@ D. Use AWS Lake Formation to define fine-grained data access policies and facili
   </tr>
 </table>
 
-<table>
-  <tr>
-    <td style="width: 50%; padding: 10px; vertical-align: top;">
-      **Answer given on ChatGPT UI**
-      
-      jkjkjkjkjkjkjkjkjkjkjkjkjkjkj
-    </td>
-    <td style="width: 50%; padding: 10px; vertical-align: top;">
-      **Answer given on meta.ai UI** 
-      
-      kjkjkjkjkjkjkjkjkjkjkjkjkjj
-    </td>
-  </tr>
-</table>
+<div style="display: flex;">
+
+  <div style="flex: 1; padding: 10px; background-color: #f0f0f0;">
+    **Column 1 Content**  
+    Line 1 of Column 1  
+    Line 2 of Column 1  
+    Line 3 of Column 1  
+  </div>
+
+  <div style="flex: 1; padding: 10px; background-color: #e0e0e0;">
+    **Column 2 Content**  
+    Line 1 of Column 2  
+    Line 2 of Column 2  
+    Line 3 of Column 2  
+  </div>
+
+</div>
+
