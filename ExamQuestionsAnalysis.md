@@ -38,17 +38,7 @@ B. Apache Ranger on Amazon EMR can provide granular access control, but it is no
 C. Redshift security groups and views can provide some level of access control, but they are not as flexible or powerful as AWS Lake Formation's fine-grained data access policies.
 </div>
 
-</div>
-<div style="display: flex;">
+| **Column 1** | **Column 2** |
+|--------------|--------------|
+| Content for column 1 | Content for column 2 |
 
-  <div style="flex: 1; padding: 10px;">
-    **Column 1 Content**  
-    This is the content for the first column.
-  </div>
-
-  <div style="flex: 1; padding: 10px;">
-    **Column 2 Content**  
-    This is the content for the second column.
-  </div>
-
-</div>
