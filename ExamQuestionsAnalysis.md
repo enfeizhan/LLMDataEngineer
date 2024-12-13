@@ -18,3 +18,21 @@ Answer given on meta.ai UI<br>The correct answer is:<br>D. Use AWS Lake Formatio
     </td>
   </tr>
 </table>
+
+<div style="display: flex;">
+
+  <div style="flex: 1; padding: 10px; background-color: #f0f0f0;">
+    **Column 1 Content**<br>
+    Line 1 of Column 1<br>
+    Line 2 of Column 1<br>
+    Line 3 of Column 1
+  </div>
+
+  <div style="flex: 1; padding: 10px; background-color: #e0e0e0;">
+    **Column 2 Content**<br>
+    Line 1 of Column 2<br>
+    Line 2 of Column 2<br>
+    Line 3 of Column 2
+  </div>
+
+</div>
