@@ -16,14 +16,23 @@ D. Use AWS Lake Formation to define fine-grained data access policies and facili
 
 Answers from the two LLMs familys share nearly identical structure. First, they highlight their correct answer by citing option D. Second, they describe in concise language their knowledge about the correct answer, which also explains why they think their choice is correct. Although they differ in exact wordings, the explanation share the same logical line. Thirdly, they both explain why other choices are incorrect. The statements are mostly correct, however, the clamation by Meta AI on Apache Ranger "not specifically designed for use with Apache Hive on Amazon EMR" is incorrect. In fact, judging solely by the name we know Apache Ranger and Apache Hive are closely related. Their integration are indeed support on Amazon EMR. Interestingly, when prompted separately, `Does Apache Ranger on Amazon EMR work with Apache Hive on Amazon EMR?`, Meta AI can point out their relationship in great details:
 >Yes, Apache Ranger on Amazon EMR can work with Apache Hive on Amazon EMR.
-
+>
 >Apache Ranger is a security framework that provides fine-grained access control and security for Hadoop components, including Hive.
+>
 >Amazon EMR supports integrating Apache Ranger with Hive to provide robust security and access control features. Here's how:
-EMR Cluster Configuration: When creating an EMR cluster, you can choose to install Apache Ranger and configure it to work with Hive.
-Ranger Hive Plugin: The Ranger Hive plugin is installed and configured on the EMR cluster. This plugin enables Ranger to manage access control and security for Hive.
-Hive Metastore Integration: Ranger integrates with the Hive metastore to retrieve metadata about Hive tables, databases, and other objects.
-Access Control and Auditing: Ranger provides fine-grained access control and auditing capabilities for Hive, allowing administrators to define policies and monitor access to Hive resources.
-By integrating Apache Ranger with Apache Hive on Amazon EMR, you can:
-Enforce fine-grained access control and security for Hive resources
-Monitor and audit access to Hive tables, databases, and other objects
-Simplify security management and compliance for your EMR cluster
+>
+>EMR Cluster Configuration: When creating an EMR cluster, you can choose to install Apache Ranger and configure it to work with Hive.
+>
+>Ranger Hive Plugin: The Ranger Hive plugin is installed and configured on the EMR cluster. This plugin enables Ranger to manage access control and security for Hive.
+>
+>Hive Metastore Integration: Ranger integrates with the Hive metastore to retrieve metadata about Hive tables, databases, and other objects.
+>
+>Access Control and Auditing: Ranger provides fine-grained access control and auditing capabilities for Hive, allowing administrators to define policies and monitor access to Hive resources.
+>
+>By integrating Apache Ranger with Apache Hive on Amazon EMR, you can:
+>
+>* Enforce fine-grained access control and security for Hive resources
+>  
+>* Monitor and audit access to Hive tables, databases, and other objects
+>  
+>* Simplify security management and compliance for your EMR cluster
