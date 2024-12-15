@@ -298,3 +298,4 @@ Here are the searchable references:
 1. AWS. (2021). What is AWS Lake Formation? https://aws.amazon.com/lake-formation/
 2. AWS. (2021). AWS Lake Formation - Features. https://aws.amazon.com/lake-formation/features/
 ```
+The updated answers from all models demonstrate that the models can associate their own explanations with legitimate supporting references and that the relevant AWS documentations must have been included in the training datasets in all the models here.
