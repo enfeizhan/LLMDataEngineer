@@ -2,6 +2,7 @@ These are questions that all LLMs we have tested demonstrate capability to answe
 
 # The Question
 Answer the following exam question and at the end back all your explanations with searchable references:
+
 A company is migrating its database servers from Amazon EC2 instances that run Microsoft SQL Server to Amazon RDS for Microsoft SQL Server DB instances. The company's analytics team must export large data elements every day until the migration is complete. The data elements are the result of SQL joins across multiple tables. The data must be in Apache Parquet format. The analytics team must store the data in Amazon S3.
 Which solution will meet these requirements in the MOST operationally efficient way?
 
