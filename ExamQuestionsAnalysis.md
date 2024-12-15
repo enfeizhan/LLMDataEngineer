@@ -110,8 +110,8 @@ The LLMs differ from this humanly train of thought appreciably. As pointed out p
 With attention as the core concept for the model architecture, the transformer LLMs here selectively focus on specific parts of the input data, allowing for more accurate and efficient processing, which arguably explains the hitherto observations. This capability of focusing emerges from intensive trainings on comprehensive datasets, which plausibly include the publicly availabe AWS documentations.
 
 Like seeking answer to other questions, perhaps the most convenient way is to ask the model itself. Inspired by this thought, the prompt is updated with minimal instructions.
->Answer the following exam question and append the reference based on which you answer the question
-
+>Answer the following exam question and append the reference based on which you answer the question:
+>
 >An organization is creating a data lake on AWS and requires granular access control. They need to grant specific users access to certain rows and columns within their datasets. The organization's teams will query the data using a combination of Amazon Athena, Amazon Redshift Spectrum, and Apache Hive on Amazon EMR. Which AWS service should the organization implement to manage data permissions efficiently?
 >
 >A. Manage access through S3 bucket policies and IAM roles for row and column-level security.
