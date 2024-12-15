@@ -111,6 +111,7 @@ With attention as the core concept for the model architecture, the transformer L
 
 Like seeking answer to other questions, perhaps the most convenient way is to ask the model itself. Inspired by this thought, the prompt is updated with minimal instructions.
 >Answer the following exam question and append the reference based on which you answer the question
+
 >An organization is creating a data lake on AWS and requires granular access control. They need to grant specific users access to certain rows and columns within their datasets. The organization's teams will query the data using a combination of Amazon Athena, Amazon Redshift Spectrum, and Apache Hive on Amazon EMR. Which AWS service should the organization implement to manage data permissions efficiently?
 >
 >A. Manage access through S3 bucket policies and IAM roles for row and column-level security.
