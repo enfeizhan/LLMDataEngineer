@@ -108,3 +108,15 @@ When a human data engineer encounters this question, the most rational problem s
 The LLMs differ from this humanly train of thought appreciably. As pointed out previously, all models across four model families converge independently on first replicating the correct option D. The explanation of why others are wrong may or may not follow up. This is remarkable because LLMs here are all autoregressive models, which predict the next correct word on the basis of the given context and all heretofore predicted words. Somehow, the words from option D even the character D itself obtain the highest probability to be taken as the prediction in the exactly correct sequence, taking precedence over words that invalidate the wrong options. What is implied here is the models can pronounce which one is correct while yet not knowing which ones are wrong, regardless of the correct option's position in the sequence.
 ## Understanding Model Functionality
 With attention as the core concept for the model architecture, the transformer LLMs here selectively focus on specific parts of the input data, allowing for more accurate and efficient processing, which arguably explains the hitherto observations. This capability of focusing emerges from intensive trainings on comprehensive datasets, which plausibly include the publicly availabe AWS documentations.
+
+Like seeking answer to other questions, perhaps the most convenient way is to ask the model itself. Inspired by this thought, the prompt is updated with minimal instructions.
+>Answer the following exam question and append the reference based on which you answer the question
+An organization is creating a data lake on AWS and requires granular access control. They need to grant specific users access to certain rows and columns within their datasets. The organization's teams will query the data using a combination of Amazon Athena, Amazon Redshift Spectrum, and Apache Hive on Amazon EMR. Which AWS service should the organization implement to manage data permissions efficiently?
+>
+>A. Manage access through S3 bucket policies and IAM roles for row and column-level security.
+>
+>B. Deploy Apache Ranger on Amazon EMR for granular access control and utilize Amazon Redshift for querying.
+>
+>C. Use Redshift security groups and views for row and column-level permissions, querying with Athena and Redshift Spectrum.
+>
+>D. Use AWS Lake Formation to define fine-grained data access policies and facilitate queries through supported AWS services.
